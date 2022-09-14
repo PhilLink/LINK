@@ -3,6 +3,11 @@
   "version": 2,
   "projects": {
     "link": "apps/link",
-    "link-e2e": "apps/link-e2e"
+    "link-animation": "libs/link-animation",
+    "link-e2e": "apps/link-e2e",
+    "link-hq": "apps/link-hq",
+    "link-hq-e2e": "apps/link-hq-e2e",
+    "link-style": "libs/link-style",
+    "link-ui": "libs/link-ui"
   }
 }
