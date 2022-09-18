@@ -13,8 +13,21 @@
         "polyfills": "apps/link-hq/src/polyfills.ts",
         "tsConfig": "apps/link-hq/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/link-hq/src/favicon.ico", "apps/link-hq/src/assets"],
-        "styles": ["libs/link-style/src/lib/link_type.scss", "libs/link-style/src/lib/link_colors.scss","libs/link-style/src/lib/link_master.scss","apps/link-hq/src/styles.scss"],
+        "assets": [
+          "apps/link-hq/src/favicon.ico", 
+          "apps/link-hq/src/assets",
+          {
+            "input": "libs/link-assets/src/lib",
+            "glob": "*.svg",
+            "output": "assets"
+          }
+        ],
+        "styles": [
+          "libs/link-style/src/lib/link_type.scss",
+          "libs/link-style/src/lib/link_colors.scss",
+          "libs/link-style/src/lib/link_master.scss",
+          "apps/link-hq/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {

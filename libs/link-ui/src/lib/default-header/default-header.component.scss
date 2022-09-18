@@ -1,0 +1,80 @@
+// DEFAULT HEADER - USED AS A BASIC BRAND / UI FOR 80% OF PAGES
+// MONKEY STYLE V1.0
+:host {
+
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: space-between;
+
+    #default_header {
+        
+        display:flex;
+        box-sizing: border-box;
+        justify-content: space-between;
+        align-items: baseline;
+        height: 80px;
+        width: 100%;
+
+        //    BRAND
+        #brand {
+
+            display:flex;
+            align-items: baseline;
+            
+            a {
+                color: white;
+                text-decoration: none;
+                margin-top: 0%;
+                padding-top: 0%;
+                font-weight: 500;
+                letter-spacing: .4rem;
+            }
+            img {
+                height: 50px;
+                width: auto;
+                margin-left: .5rem;
+            }
+        }
+        align-items: baseline;
+
+    //  USER INFO / MENU
+        #user_info {
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+
+            #user_company {
+                display:flex;
+                flex-direction: column;
+                
+                #company_title {
+                    font-weight: 600;
+                    width: 100%;
+                    display: flex;
+                    text-transform: uppercase;
+                }
+                
+                #concierge {
+                    color: rgba(208, 208, 208, 0.7);
+                    width: 100%;
+                    display:flex;
+                    flex-direction: row;   
+                    font-size: .8rem;
+                    padding-bottom: .5rem;
+                    justify-content: space-between;
+                    
+                    #feedback:hover {
+                        color: white;
+                        border-bottom: 1px solid white;
+                    }
+                    
+                }
+            }
+            
+        }
+
+        
+    
+    }
+}

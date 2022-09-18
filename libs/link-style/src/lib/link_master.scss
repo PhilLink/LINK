@@ -5,16 +5,21 @@
 
 html,
 body {
+    font-family: futura-pt, sans-serif;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow: hidden !important;
+}
+
+html {
     background-color: $link-grey;
     background: $link-grey;
     color: #f9fbfc;
-    font-family: futura-pt, sans-serif;
-    display: flex;
-    box-sizing: border-box;
-    flex-direction: column;
-    padding: 1rem;
     width: 100vw;
-    max-width: 100vw;
-    height: auto;
+    max-width: 100vw !important;
+    height: 100vh;
     min-height: 100vh;
+    max-height: 100vh;
 }
