@@ -2,6 +2,7 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "hq-modules": "libs/hq-modules",
     "link": "apps/link",
     "link-animation": "libs/link-animation",
     "link-assets": "libs/link-assets",

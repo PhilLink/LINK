@@ -5,12 +5,15 @@
 
 html,
 body {
-    font-family: futura-pt, sans-serif;
     padding: 1rem;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    overflow: hidden !important;
+    overflow: hidden !important; 
+    
+    * {
+        font-family: futura-pt, sans-serif;
+    }
 }
 
 html {

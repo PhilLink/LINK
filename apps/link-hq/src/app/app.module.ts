@@ -9,6 +9,8 @@ import { LinkAssetsModule } from '@link/link-assets';
 import { LinkStyleModule } from '@link/link-style';
 import { LinkAnimationModule } from '@link/link-animation';
 
+import { HqModulesModule } from 'libs/hq-modules/src';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -17,7 +19,8 @@ import { LinkAnimationModule } from '@link/link-animation';
     LinkUiModule,
     LinkAssetsModule,
     LinkStyleModule,
-    LinkAnimationModule
+    LinkAnimationModule,
+    HqModulesModule
   ],
   providers: [],
   bootstrap: [AppComponent],

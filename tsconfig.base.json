@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@link/hq-modules": ["libs/hq-modules/src/index.ts"],
       "@link/link-animation": ["libs/link-animation/src/index.ts"],
       "@link/link-assets": ["libs/link-assets/src/index.ts"],
       "@link/link-style": ["libs/link-style/src/index.ts"],
