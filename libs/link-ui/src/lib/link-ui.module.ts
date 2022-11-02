@@ -5,9 +5,16 @@ import { DefaultHeaderComponent } from './default-header/default-header.componen
 import { LinkAssetsModule } from '@link/link-assets';
 import { LinkStyleModule } from '@link/link-style';
 import { LinkAnimationModule } from '@link/link-animation';
+import { ExtMaterialModule } from '@link/ext-material';
 
 @NgModule({
-  imports: [CommonModule, LinkAssetsModule, LinkStyleModule, LinkAnimationModule],
+  imports: [
+    CommonModule, 
+    ExtMaterialModule,
+    LinkAssetsModule, 
+    LinkStyleModule, 
+    LinkAnimationModule
+  ],
   declarations: [DefaultHeaderComponent],
   exports: [DefaultHeaderComponent],
 })

@@ -15,6 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@link/academy-modules": ["libs/academy-modules/src/index.ts"],
+      "@link/ext-material": ["libs/ext-material/src/index.ts"],
       "@link/hq-modules": ["libs/hq-modules/src/index.ts"],
       "@link/link-animation": ["libs/link-animation/src/index.ts"],
       "@link/link-assets": ["libs/link-assets/src/index.ts"],

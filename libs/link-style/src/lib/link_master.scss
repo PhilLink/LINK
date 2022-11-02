@@ -1,7 +1,11 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+@import "link_material_theme.scss";
 @import "link_colors.scss";
 @import "link_type.scss";
 
-@import url('hhttps://use.typekit.net/npy0ttg.css');
+@import url("https://use.typekit.net/npy0ttg.css");
+
 
 html,
 body {
@@ -9,11 +13,7 @@ body {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    overflow: hidden !important; 
-    
-    * {
-        font-family: futura-pt, sans-serif;
-    }
+    overflow: hidden !important;    
 }
 
 html {
@@ -25,4 +25,51 @@ html {
     height: 100vh;
     min-height: 100vh;
     max-height: 100vh;
+}
+
+// SIDE HEADER SECTION TEMPLATE
+#section_container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    
+    #section_title {
+        display: flex;
+        width: auto;
+        margin: 1rem 0 0 0;
+        padding: 1rem;
+        background-color: rgba(0,0,0,0.2);
+        
+        h2 {
+            font-family: futura-pt-bold;
+            display: block;
+            font-size: 4rem;
+            font-weight: 800;
+            justify-content:flex-start;
+            margin: 0;
+            padding: 0;
+            line-height: 3rem;
+            letter-spacing: .4rem;
+            writing-mode: vertical-rl;
+            text-shadow: 0 0 6px rgba( 0,0,0,0.8 );
+        }
+    }
+
+    #section_content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 1rem 0 0 1rem;
+        padding: 0 .5rem !important;
+
+        mat-card-title {
+            border-left: 6px solid #F27269;
+        }
+    }
+}
+
+button {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .2rem;
 }

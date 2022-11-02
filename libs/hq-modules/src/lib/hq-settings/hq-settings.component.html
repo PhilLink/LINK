@@ -1,8 +1,21 @@
-<section id="container">
+<section id="section_container">
     <div id="section_title">
         <h2>SECTION</h2>
     </div>
     <div id="section_content">
-      
+        <mat-card>
+            <mat-card-title>Companies</mat-card-title>
+            <mat-card-content>
+                <form fxLayout="column" fxLayoutAlign="center none">
+                    <mat-form-field>
+                        <input matInput placeholder="USERNAME" type="text" #username>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="PASSWORD" type="text" #password>
+                    </mat-form-field>
+                </form>
+                <button mat-raised-button>login</button>
+            </mat-card-content>
+        </mat-card>
     </div>
 </section>

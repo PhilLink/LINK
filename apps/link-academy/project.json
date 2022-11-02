@@ -1,0 +1,104 @@
+{
+  "projectType": "application",
+  "sourceRoot": "apps/link-academy/src",
+  "prefix": "link",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/link-academy",
+        "index": "apps/link-academy/src/index.html",
+        "main": "apps/link-academy/src/main.ts",
+        "polyfills": "apps/link-academy/src/polyfills.ts",
+        "tsConfig": "apps/link-academy/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/link-academy/src/favicon.ico",
+          "apps/link-academy/src/assets",
+          {
+            "input": "libs/link-assets/src/lib",
+            "glob": "*.svg",
+            "output": "assets"
+          }
+        ],
+        "styles": [
+          "apps/link-academy/src/styles.scss",
+          "libs/link-style/src/lib/link_colors.scss",
+          "libs/link-style/src/lib/link_master.scss",
+          "apps/link-hq/src/styles.scss"
+        ],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/link-academy/src/environments/environment.ts",
+              "with": "apps/link-academy/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "link-academy:build:production"
+        },
+        "development": {
+          "port": 4203,
+          "browserTarget": "link-academy:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "link-academy:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/link-academy/**/*.ts",
+          "apps/link-academy/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/link-academy"],
+      "options": {
+        "jestConfig": "apps/link-academy/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
