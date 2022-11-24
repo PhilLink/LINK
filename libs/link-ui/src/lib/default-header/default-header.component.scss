@@ -1,11 +1,19 @@
 // DEFAULT HEADER - USED AS A BASIC BRAND / UI FOR 80% OF PAGES
 // MONKEY STYLE V1.0
+// TODO -- Abstract to universal styles & vars
+
 :host {
 
     display: flex;
     box-sizing: border-box;
-    width: 100%;
+    width: calc(100% - 5rem);
     justify-content: space-between;
+    position: absolute;
+    position: fixed;
+    top: 2rem;
+    right: 2.5rem;
+    left: 2.5rem;
+
 
     #default_header {
         
@@ -15,8 +23,9 @@
         align-items: baseline;
         height: 80px;
         width: 100%;
+        max-width: 100%;
 
-        //    BRAND
+        // BRAND
         #brand {
 
             display:flex;
@@ -30,6 +39,8 @@
                 padding-top: 0%;
                 font-weight: 500;
                 letter-spacing: .4rem;
+                display: none;
+                margin-right: -80px;
             }
             img {
                 height: 50px;
@@ -37,7 +48,6 @@
                 margin-left: .5rem;
             }
         }
-        align-items: baseline;
 
     //  USER INFO / MENU
         #user_info {
@@ -62,16 +72,44 @@
                 #concierge {
                     color: rgba(208, 208, 208, 0.7);
                     width: 100%;
-                    display:flex;
+                    display: flex;
                     flex-direction: row;   
                     font-size: .8rem;
                     padding: .1rem 0 .5rem 0;
                     justify-content: space-between;
-                    
-                    #feedback:hover {
-                        color: white;
-                        border-bottom: 1px solid white;
+                    max-height: 1rem;
+                    #date_time {
+                        width: 130px;
+                        max-width: 50%;
+                        max-height: 1rem;
                     }
+                    #notifications {
+                        max-width: fit-content;
+                        overflow: hidden !important;
+                        ul {
+                            list-style: none;
+                            overflow: hidden;
+                            padding: 0;
+                            margin: 0; 
+                            max-height: 1rem;
+                            align-items: flex-end;
+
+                            li {
+                                display: inline;
+                                margin-left: 1.6rem;
+                                b {
+                                    color: white;
+                                }
+                            }
+                        }
+
+                        ul:hover {
+                            color: white;
+                            text-decoration: underline;
+                        }
+                    }
+
+                    
                     
                 }
             }

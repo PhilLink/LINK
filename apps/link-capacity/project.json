@@ -26,7 +26,7 @@
           "apps/link-capacity/src/styles.scss",
           "libs/link-style/src/lib/link_colors.scss",
           "libs/link-style/src/lib/link_master.scss",
-          "apps/link-hq/src/styles.scss"
+          "apps/link-capacity/src/styles.scss"
         ],
         "scripts": []
       },

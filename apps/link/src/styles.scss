@@ -7,3 +7,10 @@ html {
     background-size: 40vh;
     background-blend-mode: soft-light;  
 }
+:host, html, body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}

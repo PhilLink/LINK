@@ -7,13 +7,27 @@
 @import url("https://use.typekit.net/npy0ttg.css");
 
 
+
+
+
+
+
+
+
 html,
 body {
-    padding: 1rem;
+    margin: 0;
+    padding: 2rem;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     overflow: hidden !important;    
+    overflow-y: auto !important;    
+}
+
+body {
+    background-color: rgba(57,55,55,1);
 }
 
 html {
@@ -25,6 +39,18 @@ html {
     height: 100vh;
     min-height: 100vh;
     max-height: 100vh;
+    padding: 0;
+    box-sizing: border-box;
+    // border: 1px solid green;
+}
+
+main {
+    // border: 1px solid yellow;
+    // TODO -- Set for each breakpoint size
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    margin-top: 100px !important;
 }
 
 // SIDE HEADER SECTION TEMPLATE
@@ -72,4 +98,17 @@ button {
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: .2rem;
+}
+
+
+
+// APP COLOR SETS
+.lr_color_txt {
+    color: $link-reporting;
+}
+.lc_color_txt {
+    color: $link-capacity;
+}
+.la_color_txt {
+    color: $link-academy;
 }

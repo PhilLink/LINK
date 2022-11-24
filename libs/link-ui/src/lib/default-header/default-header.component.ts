@@ -1,50 +1,89 @@
-import { Component, OnInit } from '@angular/core';
-import { gsap } from 'gsap'
+import { Component, AfterViewInit } from '@angular/core';
+
+import { gsap } from 'gsap/all';
+import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
 import { ScrambleTextPlugin } from 'gsap/ScrambleTextPlugin';
+
+gsap.registerPlugin( DrawSVGPlugin );
 
 @Component({
   selector: 'link-default-header',
   templateUrl: './default-header.component.html',
   styleUrls: ['./default-header.component.scss'],
-  
 })
-export class DefaultHeaderComponent implements OnInit {
+export class DefaultHeaderComponent implements AfterViewInit {
   
   public now: string | undefined;
-  
+  public curdate: string | undefined;
+
   constructor() {
     
     gsap.registerPlugin( ScrambleTextPlugin );
-
+    
     // CLOCK / TIME HELPER
     setInterval(() => {
       this.now = new Date().toString().split(' ')[4];
+      this.curdate = new Date().getDate().toString() + '-' + (new Date().getMonth() + 1).toString() + '-' + new Date().getFullYear().toString();
     }, 1);
 
     
   }
   
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
+    
+    gsap.set( "#brand img, #brand a, #company_title", { autoAlpha:0 } );
+    gsap.set( "#brand img", { scale:0 } );
     
     //  TEXT SCRAMBLE IN ANIMATION
     const titleIn = gsap.timeline();
-
+    titleIn.to( "#brand img", { duration: 1,  autoAlpha:1, scale: 1, ease:"power2.out"})
+    titleIn.to( "#brand img", { duration: .3,  x:+80, ease:"power2.out"})
+    titleIn.to( "#brand a", { "display":"block",  duration: 1,  autoAlpha:1 })
+    
     titleIn.to( "#company_title", {
       duration: 1,
+      autoAlpha:1,
       scrambleText:
       {
         text:"McTavish & Co Chartered Accountants",
         speed: .1,
         chars:"10"
       }
-    }),
+    }, "-=1.2"),
     titleIn.from('#date_time', {
       alpha:0
-
     }),
-    titleIn.from('#feedback', {
+    
+    // User Notification Rotator
+    titleIn.from('#notif ications', {
       alpha:0
-      
     })
+    
+    
+    titleIn.to( "body", { duration: 1, ease:"power2.inOut", "background-color":"rgba(57,55,55,0)" }, "-=1")
+    
+    this.rotateNotifications();
   }
+  
+  private rotateNotifications () {
+    
+    gsap.set( ".fb01,.fb02,.fb03,.fb04", { display:"none", opacity:0 });
+    
+    const notifications = [".fb01",".fb02",".fb03",".fb04"];
+    const n_tl = gsap.timeline({ repeat:0 });
+
+
+    // for ( let i = 0; i < notifications.length; n_i++ ) {
+      // // alert(notifications[i])
+      // n_tl.set( notifications[i], { display:"block" });
+      // n_tl.to( notifications[i], { opacity: 1, duration: 1.4 });
+      // n_tl.pause( 4 );
+      // n_tl.to( notifications[i], { opacity: 0, duration: 1.4 });
+      // n_tl.set( notifications[i], { display:"none", onComplete: this.loopNotifications });
+    // }
+  }
+  // private loopNotifications {
+  //   this.n_i++
+  // }
+
 }

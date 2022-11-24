@@ -8,8 +8,19 @@ import { HqSettingsComponent } from './hq-settings/hq-settings.component';
 import { UserSettingsComponent } from './user-settings/user-settings.component';
 
 @NgModule({
-  imports: [CommonModule, LinkStyleModule, ExtMaterialModule],
-  declarations: [HqSettingsComponent, UserSettingsComponent],
-  exports: [HqSettingsComponent, UserSettingsComponent],
+  imports: [
+    CommonModule, 
+    LinkStyleModule, 
+    ExtMaterialModule,
+    
+  ],
+  declarations: [
+    HqSettingsComponent, 
+    UserSettingsComponent, 
+  ],
+  exports: [
+    HqSettingsComponent, 
+    UserSettingsComponent
+  ],
 })
 export class HqModulesModule {}
