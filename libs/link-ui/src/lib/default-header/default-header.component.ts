@@ -15,7 +15,7 @@ export class DefaultHeaderComponent implements AfterViewInit {
   
   public now: string | undefined;
   public curdate: string | undefined;
-
+  
   constructor() {
     
     gsap.registerPlugin( ScrambleTextPlugin );
@@ -25,7 +25,7 @@ export class DefaultHeaderComponent implements AfterViewInit {
       this.now = new Date().toString().split(' ')[4];
       this.curdate = new Date().getDate().toString() + '-' + (new Date().getMonth() + 1).toString() + '-' + new Date().getFullYear().toString();
     }, 1);
-
+    
     
   }
   
@@ -33,7 +33,7 @@ export class DefaultHeaderComponent implements AfterViewInit {
     
     gsap.set( "#brand img, #brand a, #company_title", { autoAlpha:0 } );
     gsap.set( "#brand img", { scale:0 } );
-    
+
     //  TEXT SCRAMBLE IN ANIMATION
     const titleIn = gsap.timeline();
     titleIn.to( "#brand img", { duration: 1,  autoAlpha:1, scale: 1, ease:"power2.out"})
@@ -55,35 +55,63 @@ export class DefaultHeaderComponent implements AfterViewInit {
     }),
     
     // User Notification Rotator
-    titleIn.from('#notif ications', {
+    titleIn.from('#notifications', {
       alpha:0
     })
     
     
-    titleIn.to( "body", { duration: 1, ease:"power2.inOut", "background-color":"rgba(57,55,55,0)" }, "-=1")
+    titleIn.to( "body", { duration: 1, ease:"power2.inOut", "background-color":"rgba(57,55,55,0)", onComplete:this.rotateNotifications }, "-=1")
     
-    this.rotateNotifications();
+    // this.rotateNotifications();
   }
   
-  private rotateNotifications () {
-    
-    gsap.set( ".fb01,.fb02,.fb03,.fb04", { display:"none", opacity:0 });
-    
-    const notifications = [".fb01",".fb02",".fb03",".fb04"];
-    const n_tl = gsap.timeline({ repeat:0 });
+  private rotateNotifications ():void {
 
 
-    // for ( let i = 0; i < notifications.length; n_i++ ) {
-      // // alert(notifications[i])
-      // n_tl.set( notifications[i], { display:"block" });
-      // n_tl.to( notifications[i], { opacity: 1, duration: 1.4 });
-      // n_tl.pause( 4 );
-      // n_tl.to( notifications[i], { opacity: 0, duration: 1.4 });
-      // n_tl.set( notifications[i], { display:"none", onComplete: this.loopNotifications });
-    // }
+    const n_tl = gsap.timeline({ repeat:-1 });
+
+    n_tl.to( "#notifications", { duration: 1, autoAlpha:1,
+      scrambleText:
+      {
+        text:"3 OVER CAPACITY",
+        speed: .1,
+        chars:"10"
+      }
+    })
+    n_tl.to( "#notifications", {
+      duration: 1,
+      autoAlpha:0,
+      delay:4,
+      scrambleText:
+      {
+        text:"",
+        speed: .1,
+        chars:"10"
+      }
+    })
+    n_tl.to( "#notifications", {
+      delay:.5,
+      duration: 1,
+      autoAlpha:1,
+      scrambleText:
+      {
+        text:"20 Unassigned Tasks",
+        speed: .1,
+        chars:"10"
+      }
+    })
+    n_tl.to( "#notifications", {
+      duration: 1,
+      autoAlpha:0,
+      delay:4,
+      scrambleText:
+      {
+        text:"",
+        speed: .1,
+        chars:"10"
+      }
+    })
+
   }
-  // private loopNotifications {
-  //   this.n_i++
-  // }
 
 }

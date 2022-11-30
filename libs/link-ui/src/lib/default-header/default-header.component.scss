@@ -84,26 +84,12 @@
                         max-height: 1rem;
                     }
                     #notifications {
-                        max-width: fit-content;
+                        visibility: hidden;
+                        max-width: 100%;
                         overflow: hidden !important;
-                        ul {
-                            list-style: none;
-                            overflow: hidden;
-                            padding: 0;
-                            margin: 0; 
-                            max-height: 1rem;
-                            align-items: flex-end;
+                        text-transform: uppercase;
 
-                            li {
-                                display: inline;
-                                margin-left: 1.6rem;
-                                b {
-                                    color: white;
-                                }
-                            }
-                        }
-
-                        ul:hover {
+                        #notifications:hover {
                             color: white;
                             text-decoration: underline;
                         }
