@@ -13,7 +13,6 @@ jobs:
     with:
       number-of-agents: 4
       init-commands: |
-        yarn
         yarn nx-cloud start-ci-run --stop-agents-after="build" --agent-count=4
       parallel-commands: |
         yarn nx-cloud record -- yarn nx workspace-lint
