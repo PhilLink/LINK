@@ -6,6 +6,9 @@ on:
       - main
   pull_request:
 
+env: 
+  NX_CLOUD_ACCESS_TOKEN: "OTJkN2ZhYmQtNDk4Ni00N2M2LTlkMzQtOTZjMWY4NTE4Y2NkfHJlYWQtd3JpdGU="
+
 jobs:
   main:
     name: Nx Cloud - Main Job
