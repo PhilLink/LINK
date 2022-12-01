@@ -8095,9 +8095,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gsap@file:/Users/monkatron/Desktop/REPOS/LINK/tools/gsap-shockingly-green/npm-install-this/gsap-bonus.tgz::locator=link%40workspace%3A.":
+"gsap@file:./tools/gsap-shockingly-green/npm-install-this/gsap-bonus.tgz::locator=link%40workspace%3A.":
   version: 3.11.2
-  resolution: "gsap@file:/Users/monkatron/Desktop/REPOS/LINK/tools/gsap-shockingly-green/npm-install-this/gsap-bonus.tgz::locator=link%40workspace%3A."
+  resolution: "gsap@file:./tools/gsap-shockingly-green/npm-install-this/gsap-bonus.tgz::locator=link%40workspace%3A."
   checksum: 1698d529339d09fe1d41ffecf9c0f5d3bc90b7970a86ee8aec3d789c416c95eadc0f422f7a580c26286a3a6ab6b5d674eaabe17d9de9ce2e6bae401647a3cb81
   languageName: node
   linkType: hard
@@ -10005,7 +10005,7 @@ __metadata:
     eslint: ~8.15.0
     eslint-config-prettier: 8.1.0
     eslint-plugin-cypress: ^2.10.3
-    gsap: /Users/monkatron/Desktop/REPOS/LINK/tools/gsap-shockingly-green/npm-install-this/gsap-bonus.tgz
+    gsap: ./tools/gsap-shockingly-green/npm-install-this/gsap-bonus.tgz
     jest: 28.1.1
     jest-environment-jsdom: 28.1.1
     jest-preset-angular: ~12.2.2
