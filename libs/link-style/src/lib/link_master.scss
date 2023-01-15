@@ -53,6 +53,15 @@ main {
     margin-top: 100px !important;
 }
 
+// PAGE WRAP
+#page_wrap {
+    box-sizing: border-box;
+    padding: .5rem;
+    margin-top: 70px;
+    display: flex;
+    width: 100%;
+}
+
 // SIDE HEADER SECTION TEMPLATE
 #section_container {
     width: 100%;
@@ -63,15 +72,17 @@ main {
         display: flex;
         width: auto;
         margin: 1rem 0 0 0;
-        padding: 1rem;
+        padding: 1.5rem 1rem 1rem 1rem;
         background-color: rgba(0,0,0,0.2);
-        
+        overflow: hidden;
         h2 {
+            white-space: nowrap;
+            width: auto !important; 
             font-family: futura-pt-bold;
             display: block;
-            font-size: 4rem;
+            font-size: 3rem;
             font-weight: 800;
-            justify-content:flex-start;
+            justify-content: flex-start;
             margin: 0;
             padding: 0;
             line-height: 3rem;

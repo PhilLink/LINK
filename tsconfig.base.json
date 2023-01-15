@@ -21,7 +21,8 @@
       "@link/link-animation": ["libs/link-animation/src/index.ts"],
       "@link/link-assets": ["libs/link-assets/src/index.ts"],
       "@link/link-style": ["libs/link-style/src/index.ts"],
-      "@link/link-ui": ["libs/link-ui/src/index.ts"]
+      "@link/link-ui": ["libs/link-ui/src/index.ts"],
+      "@link/test-modules": ["libs/test-modules/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

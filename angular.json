@@ -16,6 +16,7 @@
     "link-hq": "apps/link-hq",
     "link-hq-e2e": "apps/link-hq-e2e",
     "link-style": "libs/link-style",
-    "link-ui": "libs/link-ui"
+    "link-ui": "libs/link-ui",
+    "test-modules": "libs/test-modules"
   }
 }
