@@ -1,5 +1,7 @@
 import { Component, AfterViewInit } from '@angular/core';
-import { gsap } from 'gsap'
+import { gsap } from 'gsap';
+
+
 export interface PeriodicElement {
   client: string;
   j_no: string;

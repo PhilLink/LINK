@@ -23,6 +23,7 @@
           }
         ],
         "styles": [
+          "./node_modules/@videogular/ngx-videogular/fonts/videogular.css",
           "apps/link-academy/src/styles.scss",
           "libs/link-style/src/lib/link_colors.scss",
           "libs/link-style/src/lib/link_master.scss",

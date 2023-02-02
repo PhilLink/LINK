@@ -1,0 +1,15 @@
+:host {
+    mat-card-content {
+        display: flex;
+        flex-direction: row;
+        
+
+    }
+        .intro_text {
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+            max-width: 60%;
+            margin: 0 1rem 0 0;
+        } 
+}

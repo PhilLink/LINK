@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './capacity-playground.component.html',
   styleUrls: ['./capacity-playground.component.scss'],
 })
+
 export class CapacityPlaygroundComponent implements OnInit {
   constructor() {
     // 

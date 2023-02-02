@@ -100,17 +100,6 @@ export class DefaultHeaderComponent implements AfterViewInit {
         chars:"10"
       }
     })
-    n_tl.to( "#notifications", {
-      duration: 1,
-      autoAlpha:0,
-      delay:4,
-      scrambleText:
-      {
-        text:"",
-        speed: .1,
-        chars:"10"
-      }
-    })
 
   }
 

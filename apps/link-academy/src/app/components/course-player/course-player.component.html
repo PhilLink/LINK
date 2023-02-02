@@ -1,0 +1,67 @@
+<section id="section_container">
+  <div id="section_title">
+    <h2>XPM</h2>
+  </div>
+  <div id="section_content">
+    <mat-card>
+      <mat-card-title>Xero Practice Manager Implementation</mat-card-title>
+      <mat-card-content>
+        <section id="intro_text">
+          <div id="video-player-wrapper">
+
+            <!-- VIDEO PLAYER -->
+            <vg-player (onPlayerReady)="videoPlayerInit($event)" id="vp" (window:resize)="onResize($event)">
+              <vg-overlay-play></vg-overlay-play>
+              <vg-buffering></vg-buffering>
+              <vg-scrub-bar>
+                <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+              </vg-scrub-bar>
+              <vg-controls>
+                <vg-play-pause></vg-play-pause>
+                <vg-playback-button></vg-playback-button>
+                <vg-time-display
+                  vgProperty="current"
+                  vgFormat="mm:ss"
+                ></vg-time-display>
+                <vg-time-display
+                  vgProperty="total"
+                  vgFormat="mm:ss"
+                ></vg-time-display>
+                <vg-mute></vg-mute>
+                <vg-volume></vg-volume>
+                <vg-fullscreen></vg-fullscreen>
+              </vg-controls>
+              <video
+                #media
+                [vgMedia]="$any(media)"
+                [src]="currentVideo.src"
+                id="singleVideo"
+                preload="true"
+                crossorigin
+              ></video>
+            </vg-player>
+
+            <!-- PLAYLIST -->
+            <!-- <ul id="player-list">
+              <li
+                *ngFor="let vdo of videoItems; let $index = index"
+                (click)="startPlaylistVdo(vdo, $index)"
+                [class.selected]="vdo === currentVideo"
+              >
+                {{ vdo.name }}
+              </li>
+            </ul> -->
+
+                <mat-selection-list id="player-list">
+                  <mat-list-item *ngFor="let vdo of videoItems; let $index = index"
+                (click)="startPlaylistVdo(vdo, $index)"
+                [class.selected]="vdo === currentVideo">{{ vdo.name }}</mat-list-item>
+                </mat-selection-list>
+
+          </div>
+        </section>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</section>

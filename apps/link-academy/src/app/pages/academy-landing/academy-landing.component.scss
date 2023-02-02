@@ -1,0 +1,23 @@
+:host {
+    mat-card-content {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+#intro_text {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    max-width: 40%;
+    min-width: 40%;
+    margin: 0 1rem 0 1rem;
+} 
+#la_invid {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    max-width: 60%;
+    margin: 0 1rem 0 1rem;
+}
